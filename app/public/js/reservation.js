@@ -5,7 +5,7 @@
 $('#mexican').on('click', function () {
     var mexicanSelect = "<h4 style='font-weight:bold;'>Fiesta Mexicana</h4>"
     var query = "<h5>Would you like to add an appetizer? (30% SeatYourself Discount!)</h5>"
-    var radioButtonMex = "<div class='form-check'><input class='form-check-input' type='radio' name='chips' id='mexApp' value='chips' checked><label class='form-check-label' for='exampleRadios1'>Tortilla Chips w/ Salsa</label></div>"
+    var radioButtonMex = "<div class='form-check'><input class='form-check-input' type='radio' name='Chips' id='mexApp' value='Chips' checked><label class='form-check-label' for='exampleRadios1'>Tortilla Chips w/ Salsa</label></div>"
     var noThankYou = "<div class='form-check'><input class='form-check-input' type='radio' name='chips' id='noMexApp' value='no chips'><label class='form-check-label' for='exampleRadios1'>No, thank you.</label></div>"
     $(mexicanSelect).appendTo('#mexican-appetizer');
     $(query).appendTo('#mexican-appetizer');
@@ -15,10 +15,10 @@ $('#mexican').on('click', function () {
     // var mexicanApp = $("input[type='radio'][name='chips']:checked").val(); 
     // console.log(mexicanApp);
     $("input[type='radio']").click(function () {
-        var radioValue = $("input[name='chips']:checked").val();
+        var radioValue = $("input[name='Chips']:checked").val();
         if (radioValue) {
             alert("You Selected - " + radioValue);
-            resRestaurant = "Fiessta Mexicana";
+            resRestaurant = "Fiesta Mexicana";
             resAppetizer = radioValue;
         }
         console.log(resRestaurant);
@@ -269,7 +269,7 @@ $("#submit").click(function () {
 
 $('#check-avail').on('click', function () {
     // window.location.replace('../public/confirm.html'); //---------------This is not a good choice!/
-
+console.log("button clicked");
 
 });
 // ----- DISPLAYS ALL RESERVATIONS ----- //
@@ -294,7 +294,7 @@ $("#check-avail").on("click", function (event) {
 
     // ----- TURNS RESERVATION INTO AN OBJECT ----- //
     var newReservation = {
-        resRestaurant: $("#resName").val().trim(),
+        resRestaurant: $("#resRestaurant").val().trim(),
         resMobile: $("#resMobile").val().trim(),
         resAppetizer: $("#resAppetizer").val().trim(),
         resTime: $("#resTime").val().trim(),

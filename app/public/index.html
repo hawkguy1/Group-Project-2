@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>SeatYourself</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="chair.png" type="image/png" sizes="16x16">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
     crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -15,9 +17,11 @@
     crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" media="screen" href="./css/reset.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
-</head>
-<body>
   
+</head>
+
+<body>
+
   <!--HEADER-->
   <div class="container">
     <div class="row">
@@ -34,9 +38,9 @@
     <div class="row">
       <div class="col-md-12" id="restaurant-select">
         <h5 align="center" style="font-weight: bold; font-size: 35px;">Where?</h5>
-        <button type="button" class="btn btn-secondary dropdown-toggle mx-auto d-block" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false" style="width:55%"></button>
-        <div class="dropdown-menu" id="restaurant-choice">
+        <button type="button" class="btn btn-secondary dropdown-toggle mx-auto d-block" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false" style="width:55%"></button>
+        <div class="dropdown-menu" id="resRestaurant">
           <button class="dropdown-item" type="button" id="mexican" value="mexican">Fiesta Mexicana</button>
           <button class="dropdown-item" type="button" id="italian" value="italian">Ristorante Italiano</button>
           <button class="dropdown-item" type="button" id="american" value="american">Burgers 'N' Bases</button>
@@ -69,15 +73,15 @@
           </div>
         </div>
       </div>
-    </div> 
-   
+    </div>
+
     <br>
     <!--TIME-->
     <div class="row">
       <div class="col-md-12" id="time-select">
         <h5 align="center" style="font-weight: bold; font-size: 35px;">What time?</h5>
-        <button type="button" class="btn btn-secondary dropdown-toggle mx-auto d-block" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false" style="width:55%"></button>
+        <button type="button" class="btn btn-secondary dropdown-toggle mx-auto d-block" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false" style="width:55%"></button>
         <div class="dropdown-menu" id="time-choice">
           <button class="dropdown-item" type="button" id="time-530" value="530">5:30 PM</button>
           <button class="dropdown-item" type="button" id="time-600" value="600">6:00 PM</button>
@@ -86,7 +90,7 @@
           <button class="dropdown-item" type="button" id="time-730" value="730">7:30 PM</button>
           <button class="dropdown-item" type="button" id="time-800" value="800">8:00 PM</button>
         </div>
-      
+
         <div class="row">
           <div class="col-md-12">
             <div align="center" id="530"></div>
@@ -114,18 +118,18 @@
         </div>
         <div class="row">
           <div class="col-md-12">
-            <div align="center" id="800"></div> 
-           </div>
+            <div align="center" id="800"></div>
+          </div>
         </div>
       </div>
-    </div> 
+    </div>
     <br>
     <!--PARTY SIZE-->
     <div class="row">
       <div class="col-md-12" id="party-size">
         <h5 align="center" style="font-weight: bold; font-size: 35px;">Party size?</h5>
-        <button type="button" class="btn btn-secondary dropdown-toggle mx-auto d-block" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false" style="width:55%"></button>
+        <button type="button" class="btn btn-secondary dropdown-toggle mx-auto d-block" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false" style="width:55%"></button>
         <div class="dropdown-menu" id="party-choice">
           <button class="dropdown-item" type="button" name="party" id="party-two" value="twoTop">Two</button>
           <button class="dropdown-item" type="button" name="party" id="party-four" value="fourTop">Four</button>
@@ -154,26 +158,27 @@
         </div>
       </div>
     </div>
-   
+
     <br>
     <br>
-   <!-- ENTER PHONE NUMBER -->
-   <div class="row">
-        <div class="col-md-12">
-            <label for="phone" class="phone">Enter your phone number to confirm reservation:</label>
-            <br>
-            <input type="tel" class="phone" name="phone" placeholder="Format: 123-456-7890" value= "" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
-                <button type="button" class="btn btn-primary btn-lg" id="submit" style="font-weight: bold; font-size: 15px; color: white">Submit</button>
-        </div>
+    <!-- ENTER PHONE NUMBER -->
+    <div class="row">
+      <div class="col-md-12">
+        <label for="phone" class="phone">Enter your phone number to confirm reservation:</label>
+        <br>
+        <input type="tel" class="phone" name="phone" placeholder="Format: 123-456-7890" value="" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          required>
+        <button type="button" class="btn btn-primary btn-lg" id="submit" style="font-weight: bold; font-size: 15px; color: white">Submit</button>
+      </div>
     </div>
     <br>
     <!--CHECK AVAILABILITY-->
     <div class="row">
       <div class="col-md-12">
-        
-          <button type="button" class="btn btn-secondary btn-lg btn-block" id="check-avail" style="font-weight: bold; font-size: 25px; color: white">Check
-            Availability</button>
-        
+
+        <button type="button" class="btn btn-secondary btn-lg btn-block" id="check-avail" style="font-weight: bold; font-size: 25px; color: white">Check Availability
+        </button>
+
       </div>
     </div>
     <!--END-->
@@ -183,4 +188,5 @@
   crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/chance/1.0.16/chance.min.js"></script>
 <script src="./js/reservation.js"></script>
+
 </html>

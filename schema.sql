@@ -30,11 +30,11 @@ VALUES ("FIESTA MEXICANA");
 INSERT INTO restaurants (restaurant_name) 
 VALUES ("RISTORANTE ITALIANO");
 INSERT INTO restaurants (restaurant_name) 
-VALUES ("AMERICAN BISTRO");
+VALUES ("BURGERS 'N' BASES");
 INSERT INTO restaurants (restaurant_name) 
-VALUES ("CHINA WOK");
+VALUES ("CHINA HAPPY FOOD");
 INSERT INTO restaurants (restaurant_name) 
-VALUES ("BREW FOR YOU");
+VALUES ("BREW-U");
 
 -- ADD INVENTORY TO TABLE --
 -- FIESTA MEXICANA --
@@ -55,7 +55,7 @@ INSERT INTO table_availability (topSize, t530, t600, t630, t700, t730, t800, res
 VALUES ("sixTop", 5, 5, 5, 5, 5, 5, 2);
 INSERT INTO table_availability (topSize, t530, t600, t630, t700, t730, t800, restaurant_id) 
 VALUES ("eightTop", 4, 4, 4, 4, 4, 4, 2);
--- AMERICAN BISTRO --
+-- BURGERS 'N' BASES --
 INSERT INTO table_availability (topSize, t530, t600, t630, t700, t730, t800, restaurant_id) 
 VALUES ("twoTop", 12, 12, 12, 12, 12, 12, 3);
 INSERT INTO table_availability (topSize, t530, t600, t630, t700, t730, t800, restaurant_id) 
@@ -64,7 +64,7 @@ INSERT INTO table_availability (topSize, t530, t600, t630, t700, t730, t800, res
 VALUES ("sixTop", 6, 6, 6, 6, 6, 6, 3);
 INSERT INTO table_availability (topSize, t530, t600, t630, t700, t730, t800, restaurant_id) 
 VALUES ("eightTop", 4, 4, 4, 4, 4, 4, 3);
--- CHINA WOK --
+-- CHINA HAPPY FOOD --
 INSERT INTO table_availability (topSize, t530, t600, t630, t700, t730, t800, restaurant_id) 
 VALUES ("twoTop", 8, 8, 8, 8, 8, 8, 4);
 INSERT INTO table_availability (topSize, t530, t600, t630, t700, t730, t800, restaurant_id) 
@@ -73,7 +73,7 @@ INSERT INTO table_availability (topSize, t530, t600, t630, t700, t730, t800, res
 VALUES ("sixTop", 4, 4, 4, 4, 4, 4, 4);
 INSERT INTO table_availability (topSize, t530, t600, t630, t700, t730, t800, restaurant_id) 
 VALUES ("eightTop", 2, 2, 2, 2, 2, 2, 4);
--- BREW FOR YOU --
+-- BREW-U --
 INSERT INTO table_availability (topSize, t530, t600, t630, t700, t730, t800, restaurant_id) 
 VALUES ("twoTop", 14, 14, 14, 14, 14, 14, 5);
 INSERT INTO table_availability (topSize, t530, t600, t630, t700, t730, t800, restaurant_id) 
@@ -83,20 +83,7 @@ VALUES ("sixTop", 6, 6, 6, 6, 6, 6, 5);
 INSERT INTO table_availability (topSize, t530, t600, t630, t700, t730, t800, restaurant_id) 
 VALUES ("eightTop", 2, 2, 2, 2, 2, 2, 5);
 
-
-CREATE TABLE guestInfo (
-	id INTEGER AUTO_INCREMENT NOT NULL,
-    resRestaurant INTEGER NOT NULL,
-    resMobile INTEGER NOT NULL,
-    resAppetizer VARCHAR (30),
-    resTime VARCHAR (15),
-    resGuests INTEGER (5),
-    PRIMARY KEY(id)
-    );
-
 -- DISPLAY RESTAURANT TABLE --
 SELECT * FROM restaurants;
 -- DISPLAY INVENTORY TABLE --
 SELECT * FROM table_availability;
--- DISPLAY RESERVATION TABLE --
-SELECT * FROM guestInfo;
