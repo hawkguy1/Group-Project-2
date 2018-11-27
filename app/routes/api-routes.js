@@ -5,7 +5,7 @@ var connection = require("../config/connection.js");
 module.exports = function(app) {
   // ----- GETS ALL RESERVATIONS ----- //
   app.get("/api/all", function(req, res) {
-    var dbQuery = "SELECT * FROM table_reservations";
+    var dbQuery = "SELECT * FROM guestInfo";
     connection.query(dbQuery, function(err, result) {
       if (err) throw err;
       res.json(result);
@@ -17,9 +17,9 @@ module.exports = function(app) {
     console.log("RESERVATION DATA:");
     console.log(req.body);
 
-    var dbQuery = "INSERT INTO table_reservations (name, num_in_party, phone_number, created_at) VALUES (?,?,?,?)";
+    var dbQuery = "INSERT INTO guestInfo (resRestaurant, resMobile, resAppetizer, resTime, resGuests) VALUES (?,?,?,?,?)";
 
-    connection.query(dbQuery, [req.body.name, req.body.num_in_party, req.body.phone_number, req.body.created_at], function(err, result) {
+    connection.query(dbQuery, [req.body.resRestaurant, req.body.resMobile, req.body.resAppetizer, req.body.resTime, req.body.resGuests], function(err, result) {
       if (err) throw err;
       console.log("RESERVATION MADE!");
       res.end();
