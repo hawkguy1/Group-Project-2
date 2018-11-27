@@ -1,0 +1,25 @@
+{
+  "name": "group-project-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hawkguy1/Group-Project-2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hawkguy1/Group-Project-2/issues"
+  },
+  "homepage": "https://github.com/hawkguy1/Group-Project-2#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "inquirer": "^6.2.0",
+    "mysql": "^2.16.0"
+  }
+}

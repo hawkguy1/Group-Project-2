@@ -2,19 +2,23 @@ var Sequelize = require("sequelize");
 // ----- DATABASE CONNECTION REFERENCE ----- //
 var sequelize = require("../config/connection.js");
 // ----- CREATES RESERVATION MODEL TO MATCH DB ----- //
-var Reservations = sequelize.define("reservations", {
-  // id: {
-  //   type: Sequelize.INTEGER,
-  //   autoIncrement: true,
-  //   primaryKey: true
-  // },
-  author: Sequelize.STRING,
-  body: Sequelize.STRING,
-  created_at: Sequelize.DATE
+
+module.exports = function(sequelize, resRestaurant, resMobile, resAppetizer, resTime, resGuests) {
+var Reservations = sequelize.define("guestInfo", {
+  id: {
+    type: Sequelize.INTEGER,
+    autoIncrement: true,
+    primaryKey: true
+  },
+  resRestaurant: Sequelize.INTEGER,
+  resMobile: Sequelize.STRING,
+  resAppetizer: Sequelize.STRING,
+  resTime: Sequelize.STRING,
+  resGuests: Sequelize.INTEGER
 });
 
-// Syncs with DB
-Reservations.sync();
-
-// Makes the Chirp Model available for other files (will also create a table)
-module.exports = Chirp;d
+Reservations.associate = function(models) {
+    onDelete: "cascade"
+};
+return Reservations;
+};

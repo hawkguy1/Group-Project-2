@@ -1,5 +1,6 @@
 // ----- NODE/EXPRESS SERVER DEPENDENCIES ----- //
 var express = require("express");
+var db = require("./app/models");
 
 // ----- INITIALIZES EXPRESS ----- //
 var app = express();
@@ -19,7 +20,7 @@ db.sequelize.sync().then(function () {
     app.listen(PORT, function () {
         console.log("APP LISTENING ON PORT " + PORT);
     });
-});var db = require("./models");
+});
 
 // ----- REQURE DATA PARSING ----- //
 app.use(express.urlencoded({ extended: true }));
